@@ -1,0 +1,43 @@
+Spark Command: /usr/opt/oracle-jdk-bin-1.7.0.80/bin/java -cp /homes/dschatzl/scratch/spark/conf/:/homes/dschatzl/scratch/spark/assembly/target/scala-2.10/spark-assembly-1.6.1-hadoop2.6.0.jar:/homes/dschatzl/scratch/spark/lib_managed/jars/datanucleus-core-3.2.10.jar:/homes/dschatzl/scratch/spark/lib_managed/jars/datanucleus-rdbms-3.2.9.jar:/homes/dschatzl/scratch/spark/lib_managed/jars/datanucleus-api-jdo-3.2.6.jar:/homes/dschatzl/scratch/hadoop-2.6.0/etc/hadoop/:/homes/dschatzl/scratch/hadoop-2.6.0/etc/hadoop/ -Xms1g -Xmx1g -XX:MaxPermSize=256m org.apache.spark.deploy.master.Master --ip mc10.cs.purdue.edu --port 7077 --webui-port 8080
+========================================
+16/04/25 23:03:14 INFO master.Master: Registered signal handlers for [TERM, HUP, INT]
+16/04/25 23:03:14 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/04/25 23:03:15 INFO spark.SecurityManager: Changing view acls to: dschatzl
+16/04/25 23:03:15 INFO spark.SecurityManager: Changing modify acls to: dschatzl
+16/04/25 23:03:15 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(dschatzl); users with modify permissions: Set(dschatzl)
+16/04/25 23:03:16 INFO util.Utils: Successfully started service 'sparkMaster' on port 7077.
+16/04/25 23:03:16 INFO master.Master: Starting Spark master at spark://mc10.cs.purdue.edu:7077
+16/04/25 23:03:16 INFO master.Master: Running Spark version 1.6.1
+16/04/25 23:03:16 INFO server.Server: jetty-8.y.z-SNAPSHOT
+16/04/25 23:03:16 INFO server.AbstractConnector: Started SelectChannelConnector@0.0.0.0:8080
+16/04/25 23:03:16 INFO util.Utils: Successfully started service 'MasterUI' on port 8080.
+16/04/25 23:03:16 INFO ui.MasterWebUI: Started MasterWebUI at http://128.10.12.210:8080
+16/04/25 23:03:16 INFO server.Server: jetty-8.y.z-SNAPSHOT
+16/04/25 23:03:16 INFO server.AbstractConnector: Started SelectChannelConnector@mc10.cs.purdue.edu:6066
+16/04/25 23:03:16 INFO util.Utils: Successfully started service on port 6066.
+16/04/25 23:03:16 INFO rest.StandaloneRestServer: Started REST server for submitting applications on port 6066
+16/04/25 23:03:17 INFO master.Master: I have been elected leader! New state: ALIVE
+16/04/25 23:03:40 INFO master.Master: Registering worker 128.10.12.210:35498 with 4 cores, 6.8 GB RAM
+16/04/25 23:03:47 INFO master.Master: Registering app JavaWordCount
+16/04/25 23:03:47 INFO master.Master: Registered app JavaWordCount with ID app-20160425230347-0000
+16/04/25 23:03:47 INFO master.Master: Launching executor app-20160425230347-0000/0 on worker worker-20160425230339-128.10.12.210-35498
+16/04/25 23:04:22 INFO master.Master: Received unregister request from application app-20160425230347-0000
+16/04/25 23:04:22 INFO master.Master: Removing app app-20160425230347-0000
+16/04/25 23:04:22 INFO master.Master: mc10.cs.purdue.edu:37822 got disassociated, removing it.
+16/04/25 23:04:22 INFO master.Master: 128.10.12.210:37241 got disassociated, removing it.
+16/04/25 23:04:22 INFO spark.SecurityManager: Changing view acls to: dschatzl
+16/04/25 23:04:22 INFO spark.SecurityManager: Changing modify acls to: dschatzl
+16/04/25 23:04:22 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(dschatzl); users with modify permissions: Set(dschatzl)
+16/04/25 23:04:22 WARN master.Master: Got status update for unknown executor app-20160425230347-0000/0
+16/04/25 23:08:57 INFO master.Master: Registering app JavaWordCount
+16/04/25 23:08:57 INFO master.Master: Registered app JavaWordCount with ID app-20160425230857-0001
+16/04/25 23:08:57 INFO master.Master: Launching executor app-20160425230857-0001/0 on worker worker-20160425230339-128.10.12.210-35498
+16/04/25 23:09:08 INFO master.Master: Received unregister request from application app-20160425230857-0001
+16/04/25 23:09:08 INFO master.Master: Removing app app-20160425230857-0001
+16/04/25 23:09:08 INFO spark.SecurityManager: Changing view acls to: dschatzl
+16/04/25 23:09:08 INFO spark.SecurityManager: Changing modify acls to: dschatzl
+16/04/25 23:09:08 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(dschatzl); users with modify permissions: Set(dschatzl)
+16/04/25 23:09:08 INFO master.Master: mc10.cs.purdue.edu:37868 got disassociated, removing it.
+16/04/25 23:09:08 INFO master.Master: 128.10.12.210:36728 got disassociated, removing it.
+16/04/25 23:09:09 WARN master.Master: Got status update for unknown executor app-20160425230857-0001/0
+16/04/25 23:10:41 ERROR master.Master: RECEIVED SIGNAL 15: SIGTERM

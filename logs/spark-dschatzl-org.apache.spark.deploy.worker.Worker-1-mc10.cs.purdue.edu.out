@@ -1,0 +1,42 @@
+Spark Command: /usr/opt/oracle-jdk-bin-1.7.0.80/bin/java -cp /homes/dschatzl/scratch/spark/conf/:/homes/dschatzl/scratch/spark/assembly/target/scala-2.10/spark-assembly-1.6.1-hadoop2.6.0.jar:/homes/dschatzl/scratch/spark/lib_managed/jars/datanucleus-core-3.2.10.jar:/homes/dschatzl/scratch/spark/lib_managed/jars/datanucleus-rdbms-3.2.9.jar:/homes/dschatzl/scratch/spark/lib_managed/jars/datanucleus-api-jdo-3.2.6.jar:/homes/dschatzl/scratch/hadoop-2.6.0/etc/hadoop/:/homes/dschatzl/scratch/hadoop-2.6.0/etc/hadoop/ -Xms1g -Xmx1g -XX:MaxPermSize=256m org.apache.spark.deploy.worker.Worker --webui-port 8081 spark://mc10.cs.purdue.edu:7077 -c 1
+========================================
+16/04/27 12:41:58 INFO worker.Worker: Registered signal handlers for [TERM, HUP, INT]
+16/04/27 12:41:59 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/04/27 12:41:59 INFO spark.SecurityManager: Changing view acls to: dschatzl
+16/04/27 12:41:59 INFO spark.SecurityManager: Changing modify acls to: dschatzl
+16/04/27 12:41:59 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(dschatzl); users with modify permissions: Set(dschatzl)
+16/04/27 12:42:00 INFO util.Utils: Successfully started service 'sparkWorker' on port 44154.
+16/04/27 12:42:00 INFO worker.Worker: Starting Spark worker 128.10.12.210:44154 with 1 cores, 6.8 GB RAM
+16/04/27 12:42:00 INFO worker.Worker: Running Spark version 1.6.1
+16/04/27 12:42:00 INFO worker.Worker: Spark home: /homes/dschatzl/scratch/spark
+16/04/27 12:42:00 INFO server.Server: jetty-8.y.z-SNAPSHOT
+16/04/27 12:42:00 INFO server.AbstractConnector: Started SelectChannelConnector@0.0.0.0:8081
+16/04/27 12:42:00 INFO util.Utils: Successfully started service 'WorkerUI' on port 8081.
+16/04/27 12:42:00 INFO ui.WorkerWebUI: Started WorkerWebUI at http://128.10.12.210:8081
+16/04/27 12:42:00 INFO worker.Worker: Connecting to master mc10.cs.purdue.edu:7077...
+16/04/27 12:42:01 INFO worker.Worker: Successfully registered with master spark://mc10.cs.purdue.edu:7077
+16/04/27 12:42:08 INFO worker.Worker: Asked to launch executor app-20160427124207-0000/0 for JavaWordCount
+16/04/27 12:42:08 INFO spark.SecurityManager: Changing view acls to: dschatzl
+16/04/27 12:42:08 INFO spark.SecurityManager: Changing modify acls to: dschatzl
+16/04/27 12:42:08 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(dschatzl); users with modify permissions: Set(dschatzl)
+16/04/27 12:42:08 INFO worker.ExecutorRunner: Launch command: "/usr/opt/oracle-jdk-bin-1.7.0.80/bin/java" "-cp" "/homes/dschatzl/scratch/spark/conf/:/homes/dschatzl/scratch/spark/assembly/target/scala-2.10/spark-assembly-1.6.1-hadoop2.6.0.jar:/homes/dschatzl/scratch/spark/lib_managed/jars/datanucleus-core-3.2.10.jar:/homes/dschatzl/scratch/spark/lib_managed/jars/datanucleus-rdbms-3.2.9.jar:/homes/dschatzl/scratch/spark/lib_managed/jars/datanucleus-api-jdo-3.2.6.jar:/homes/dschatzl/scratch/hadoop-2.6.0/etc/hadoop/:/homes/dschatzl/scratch/hadoop-2.6.0/etc/hadoop/" "-Xms2048M" "-Xmx2048M" "-Dspark.driver.port=36460" "-XX:MaxPermSize=256m" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@128.10.12.210:36460" "--executor-id" "0" "--hostname" "128.10.12.210" "--cores" "1" "--app-id" "app-20160427124207-0000" "--worker-url" "spark://Worker@128.10.12.210:44154"
+16/04/27 12:42:20 INFO worker.Worker: Asked to kill executor app-20160427124207-0000/0
+16/04/27 12:42:20 INFO worker.ExecutorRunner: Runner thread for executor app-20160427124207-0000/0 interrupted
+16/04/27 12:42:20 INFO worker.ExecutorRunner: Killing process!
+16/04/27 12:42:21 INFO worker.Worker: Executor app-20160427124207-0000/0 finished with state KILLED exitStatus 1
+16/04/27 12:42:21 INFO worker.Worker: Cleaning up local directories for application app-20160427124207-0000
+16/04/27 12:42:21 INFO shuffle.ExternalShuffleBlockResolver: Application app-20160427124207-0000 removed, cleanupLocalDirs = true
+16/04/27 12:48:01 INFO worker.Worker: Asked to launch executor app-20160427124801-0001/0 for PythonSort
+16/04/27 12:48:01 INFO spark.SecurityManager: Changing view acls to: dschatzl
+16/04/27 12:48:01 INFO spark.SecurityManager: Changing modify acls to: dschatzl
+16/04/27 12:48:01 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(dschatzl); users with modify permissions: Set(dschatzl)
+16/04/27 12:48:01 INFO worker.ExecutorRunner: Launch command: "/usr/opt/oracle-jdk-bin-1.7.0.80/bin/java" "-cp" "/homes/dschatzl/scratch/spark/conf/:/homes/dschatzl/scratch/spark/assembly/target/scala-2.10/spark-assembly-1.6.1-hadoop2.6.0.jar:/homes/dschatzl/scratch/spark/lib_managed/jars/datanucleus-core-3.2.10.jar:/homes/dschatzl/scratch/spark/lib_managed/jars/datanucleus-rdbms-3.2.9.jar:/homes/dschatzl/scratch/spark/lib_managed/jars/datanucleus-api-jdo-3.2.6.jar:/homes/dschatzl/scratch/hadoop-2.6.0/etc/hadoop/:/homes/dschatzl/scratch/hadoop-2.6.0/etc/hadoop/" "-Xms2048M" "-Xmx2048M" "-Dspark.driver.port=40415" "-XX:MaxPermSize=256m" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@128.10.12.210:40415" "--executor-id" "0" "--hostname" "128.10.12.210" "--cores" "1" "--app-id" "app-20160427124801-0001" "--worker-url" "spark://Worker@128.10.12.210:44154"
+16/04/27 12:48:20 INFO worker.Worker: Asked to kill executor app-20160427124801-0001/0
+16/04/27 12:48:20 INFO worker.ExecutorRunner: Runner thread for executor app-20160427124801-0001/0 interrupted
+16/04/27 12:48:20 INFO worker.ExecutorRunner: Killing process!
+16/04/27 12:48:21 INFO worker.Worker: Executor app-20160427124801-0001/0 finished with state KILLED exitStatus 143
+16/04/27 12:48:21 INFO worker.Worker: Cleaning up local directories for application app-20160427124801-0001
+16/04/27 12:48:21 INFO shuffle.ExternalShuffleBlockResolver: Application app-20160427124801-0001 removed, cleanupLocalDirs = true
+16/04/27 13:53:20 ERROR worker.Worker: RECEIVED SIGNAL 15: SIGTERM
+16/04/27 13:53:20 INFO util.ShutdownHookManager: Shutdown hook called
+16/04/27 13:53:20 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-181af135-de4e-4ef3-878c-21aa3ebdf87d

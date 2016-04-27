@@ -1,0 +1,51 @@
+#!/bin/bash
+
+if [[ $1 == "start" ]]; then
+   ## Start HDFS daemons
+   # Start the namenode daemon
+   $HADOOP_PREFIX/sbin/hadoop-daemon.sh start namenode
+   # Start the datanode daemon
+   $HADOOP_PREFIX/sbin/hadoop-daemon.sh start datanode
+
+   ## Start YARN daemons
+   # Start the resourcemanager daemon
+   $HADOOP_PREFIX/sbin/yarn-daemon.sh start resourcemanager
+   # Start the nodemanager daemon
+   $HADOOP_PREFIX/sbin/yarn-daemon.sh start nodemanager
+
+elif [[ $1 == "hdfs" ]]; then
+   ## Start HDFS daemons
+   # Start the namenode daemon
+   $HADOOP_PREFIX/sbin/hadoop-daemon.sh start namenode
+   # Start the datanode daemon
+   $HADOOP_PREFIX/sbin/hadoop-daemon.sh start datanode
+
+
+
+elif [[ $1 == "slave" ]]; then
+   # Start the datanode daemon
+   $HADOOP_PREFIX/sbin/hadoop-daemon.sh start datanode
+   # Start the nodemanager daemon
+   $HADOOP_PREFIX/sbin/yarn-daemon.sh start nodemanager
+
+elif [[ $1 == "stop" ]]; then
+   ## Stop HDFS daemons
+   # Stop the namenode daemon
+   $HADOOP_PREFIX/sbin/hadoop-daemon.sh stop namenode
+   # Stop the datanode daemon
+   $HADOOP_PREFIX/sbin/hadoop-daemon.sh stop datanode
+
+   ## Stop YARN daemons
+   # Stop the resourcemanager daemon
+   $HADOOP_PREFIX/sbin/yarn-daemon.sh stop resourcemanager
+   # Stop the nodemanager daemon
+   $HADOOP_PREFIX/sbin/yarn-daemon.sh stop nodemanager
+
+   for i in $HADOOP_PREFIX/logs/hadoop*; do
+       >$i
+   done
+   for i in $HADOOP_PREFIX/logs/yarn*; do
+       >$i
+   done
+   rm -rf $HADOOP_PREFIX/logs/userlogs/*
+fi
