@@ -631,6 +631,9 @@ private[spark] class TaskSetManager(
     if(my_metrics.netOH != 0){
         delay_average = ((delay_average + my_metrics.netOH) / 2L);
     }
+    else{
+        delay_average = 0;
+    }
     var my_index = 0;
     if(getLocalityWait(TaskLocality.NODE_LOCAL) == 3001){
         logInfo("UPDATING");
